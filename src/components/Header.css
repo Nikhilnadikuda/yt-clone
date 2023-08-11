@@ -1,0 +1,124 @@
+.header {
+  position: fixed;
+  margin-bottom: 100px;
+  margin-right: 10px;
+  z-index: 1;
+  background-color: #fafafa;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px 5px 10px;
+}
+.header-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0px;
+  gap: 5px;
+}
+
+.header-center {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+.header-center > input {
+  flex: 1;
+  padding: 5px;
+  border: none;
+  outline: none;
+  font-size: medium;
+}
+.header-center > .search-icon {
+  width: 50px !important;
+  border-left: 1px;
+  background-color: #fafafa;
+  border-left: 1px solid lightgray;
+  color: gray;
+}
+.logo {
+  height: 24px;
+  object-fit: contain;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:10px;
+  margin-right: 20px;
+}
+
+.icons {
+  cursor: pointer;
+  font-size: 30px !important;
+  color:black;
+}
+
+
+@media (max-width:730px){
+  .header {
+    position: fixed;
+    margin-bottom: 100px;
+    margin-right: 10px;
+    z-index: 1;
+    background-color: #fafafa;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px 5px 6px;
+  }
+  .header-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-center{
+    flex:1;
+    margin-left: 30px;
+    width:70%;
+    margin-right:20px;
+  }
+}
+@media (max-width:630px){
+  .header {
+    position: fixed;
+    margin-bottom: 100px;
+    margin-right: 10px;
+    z-index: 1;
+    background-color: #fafafa;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px 5px 6px;
+  }
+  .header-center{
+    flex:1;
+    margin-left: 30px;
+    width:70%;
+    margin-right: 15px;
+  }
+  .logo {
+    height: 16px;
+    object-fit: contain;
+  }
+  .header-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+  }
+
+  .header-left > .menu-bar-button{
+    display: none;
+  }
+  
+  .header-right {
+    display: none;
+  }
+}

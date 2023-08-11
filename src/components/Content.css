@@ -1,0 +1,31 @@
+.main-content-container{
+    margin: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap:40px;
+}
+
+@media (max-width:2000px){
+    .main-content-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:1020px){
+    .main-content-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+@media (max-width:600px) {
+    .main-content-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+

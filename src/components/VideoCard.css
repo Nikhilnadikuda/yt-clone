@@ -1,0 +1,118 @@
+.video-card {
+  cursor: pointer;
+  width: 350px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-card-thumb {
+  height: 220px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.video-info {
+  display: flex;
+  margin-right: 10px;
+}
+
+.video-text {
+  margin-left: 4px;
+  margin-right: 2px;
+  margin-bottom: 10px;
+}
+
+@media (max-width:680px){
+  .video-card {
+    cursor: pointer;
+    width: 140px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  .video-card-thumb {
+    height: 80px;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+
+@media (max-width:1510px){
+  .video-card {
+    cursor: pointer;
+    width: 450px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  .video-card-thumb {
+    height: 280px;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+@media (max-width:1215px){
+  .video-card {
+    cursor: pointer;
+    width: 400px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  .video-card-thumb {
+    height: 280px;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+@media (max-width:1096px){
+  .video-card {
+    cursor: pointer;
+    width: 46%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  .video-card-thumb {
+    height: 200px;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+@media (max-width:760px){
+  .video-card {
+    cursor: pointer;
+    width: 45%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  .video-card-thumb {
+    height: 160px;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+
+@media (max-width:480px) {
+  .video-card {
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  .video-card-thumb {
+    height: 180px;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+
