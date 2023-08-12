@@ -1,6 +1,6 @@
 import React from 'react'
 import VideoCard from './VideoCard'
-import './Content.css'
+import '../Contentclone.css'
 const Content = () => {
   const videos=[
     {

@@ -1,6 +1,6 @@
 import React from "react";
 import AccountCircleIcon from "@mui/icons-material/AccountCircleOutlined";
-import "./VideoCard.css";
+import "../Videocardclone.css";
 import logo from '../images/thumb.avif'
 const VideoCard = ({ video }) => {
   const { title, views, channel, timestamp, image } = video;

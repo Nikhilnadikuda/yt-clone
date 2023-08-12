@@ -1,0 +1,35 @@
+.video-card {
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  .video-card-thumb {
+    height: 250px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  .video-info {
+    display: flex;
+    margin-right: 10px;
+  }
+  
+  .video-text {
+    margin-left: 4px;
+    margin-right: 2px;
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width:450px){
+    .video-card-thumb {
+        height: 250px;
+        width: 100%;
+        cursor: pointer;
+        border-radius: 0px;
+      }
+  }
+  
+  

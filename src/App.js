@@ -4,7 +4,7 @@ import Sidebar from './components/Sidebar'
 import Content from './components/Content'
 import Shorts from "./components/Shorts";
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
-import './App.css'
+import './Appclone.css'
 import Subscribers from "./components/Subscribers";
 import Library from "./components/Library";
 function App() {
