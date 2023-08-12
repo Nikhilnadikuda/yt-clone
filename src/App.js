@@ -7,6 +7,7 @@ import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
 import './Appclone.css'
 import Subscribers from "./components/Subscribers";
 import Library from "./components/Library";
+import RecommendationTiles from "./components/RecommendationTiles";
 function App() {
   const[openmenu,setOpenmenu]=useState(true);
   const toggleMenu=()=>{
@@ -29,6 +30,7 @@ function App() {
   return (
     <Router>
         <Header openmenu={openmenu} toggleMenu={toggleMenu}/>
+        <RecommendationTiles/>
         <SideBar/>
         <Routes>
           <Route index path="/" element={<Home/>}/>
