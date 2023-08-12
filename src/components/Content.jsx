@@ -50,6 +50,30 @@ const Content = () => {
       views:"500k",
       timestamp:"1 hour ago",
       image:require('../images/thumb.avif')
+    },
+    {
+      id:7,
+      title:"Video Number 7",
+      channel:"Athishay",
+      views:"500k",
+      timestamp:"1 hour ago",
+      image:require('../images/thumb.avif')
+    },
+    {
+      id:8,
+      title:"Video Number 8",
+      channel:"Athishay",
+      views:"500k",
+      timestamp:"1 hour ago",
+      image:require('../images/thumb.avif')
+    },
+    {
+      id:9,
+      title:"Video Number 9",
+      channel:"Athishay",
+      views:"500k",
+      timestamp:"1 hour ago",
+      image:require('../images/thumb.avif')
     }
   ]
   return (

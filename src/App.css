@@ -2,7 +2,32 @@
   display: flex;
 }
 
-.sidebar-container {
+.sidebar-container{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+  height: 100vh;
+  width: 16%;
+  margin-top: 58px;
+  background-color: #fafafa;
+}
+.item-link{
+  text-decoration: none;
+  color: black;
+}
+.content-container {
+  position: relative;
+  margin-top: 40px;
+  width: 84%;
+  left: 15%;
+}
+
+.sidebar-menu-container{
+  width: 100%;
+}
+
+/* .sidebar-container.open {
   position: fixed;
   z-index: 1;
   height: 100vh;
@@ -11,24 +36,75 @@
   background-color: #fafafa;
 }
 
-.content-container {
+.sidebar-container.close {
+  position: absolute;
+  width: 5%;
+  margin-top: 60px;
+  background-color: #fafafa;
+  z-index: 1;
+}
+
+.sidebar-container.close>.sidebar-title {
+  display: none;
+}
+
+.content-container.close {
+  position: relative;
+  margin-top: 40px;
+  width: 95%;
+  left: 5%;
+}
+
+.sidebar-container.close>.sidebar-menu-container>.sidebar-item>.sidebar-title {
+  display: none;
+}
+
+.sidebar-container.close>.sidebar-menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-container.open {
   position: relative;
   margin-top: 40px;
   width: 84%;
   left: 16%;
-}
+} */
 
-
-@media (max-width:950px){
+@media (max-width:1500px) {
   .sidebar-container {
-    position: absolute;
-    width:0%;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    position: fixed;
+    bottom: 0px;
+    overflow-y: scroll;
+    height: 58px;
+  }
+
+  .sidebar-menu-container {
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+    height: 50px;
+  }
+
+  .line {
     display: none;
-    margin-top: 60px;
-    background-color: #fafafa;
   }
 
   .content-container {
+    margin: 0;
     position: relative;
     margin-top: 40px;
     width: 100%;
@@ -37,30 +113,23 @@
 }
 
 @media (max-width: 600px) {
-  .sidebar-container {
-    position: absolute;
-    width:0%;
-    display: none;
-    margin-top: 60px;
-    background-color: #fafafa;
-  }
-
-  .content-container {
-    position: relative;
-    margin-top: 40px;
-    width: 100%;
-    left: 0%;
-  }
-
-  .container {
+  .sidebar-menu-container {
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    background-color: #ffffff;
+    overflow: auto;
+    height: 58px;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
   }
 }
 
-
-p{
+p {
   font-size: 15px;
   margin: 0;
   padding: 0 !important;
