@@ -1,11 +1,10 @@
 import React from "react";
 import AccountCircleIcon from "@mui/icons-material/AccountCircleOutlined";
 import "../Videocardclone.css";
-import logo from '../images/thumb.avif'
-const VideoCard = ({ video }) => {
+const VideoCard = ({ video ,click}) => {
   const { title, views, channel, timestamp, image } = video;
   return (
-    <div className="video-card">
+    <div className="video-card" onClick={click}>
       <img src={image} alt="" className="video-card-thumb" />
       <div className="video-info">
         <AccountCircleIcon className="icons"/>

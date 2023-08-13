@@ -18,7 +18,7 @@
   }
   .content-container {
     position: relative;
-    margin-top: 40px;
+    margin-top: 70px;
     width: 84%;
     left: 15%;
   }
@@ -106,7 +106,7 @@
     .content-container {
       margin: 0;
       position: relative;
-      margin-top: 40px;
+      margin-top: 70px;
       width: 100%;
       left: 0%;
     }

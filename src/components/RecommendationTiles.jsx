@@ -1,23 +1,27 @@
 import React from 'react'
 import './RecommendationTiles.css'
-const RecommendationTiles = () => {
+const RecommendationTiles = (props) => {
+    const handleClick=(cat)=>{
+        props.setContent(cat);
+    }
     return (
         <div className="container">
             <div className='rec-tiles'>
-                <div className="tile">All</div>
-                <div className="tile">Gaming</div>
-                <div className="tile">Documentary</div>
-                <div className="tile">News</div>
-                <div className="tile">Popular</div>
-                <div className="tile">Comedy</div>
-                <div className="tile">Recommended</div>
-                <div className="tile">Cricket</div>
-                <div className="tile">Electronics</div>
-                <div className="tile">Shopping</div>
-                <div className="tile">Live</div>
-                <div className="tile">Music</div>
-                <div className="tile">Recently uploaded</div>
-                <div className="tile">For you</div>
+                <div className="tile" onClick={()=>handleClick("")}>All</div>
+                <div className="tile" onClick={()=>handleClick("gaming")}>Gaming</div>
+                <div className="tile" onClick={()=>handleClick("documentary")}>Documentary</div>
+                <div className="tile" onClick={()=>handleClick("news")}>News</div>
+                <div className="tile" onClick={()=>handleClick("popular")}>Popular</div>
+                <div className="tile" onClick={()=>handleClick("comedy")}>Comedy</div>
+                <div className="tile" onClick={()=>handleClick("recommended")}>Recommended</div>
+                <div className="tile" onClick={()=>handleClick("cricket")}>Cricket</div>
+                <div className="tile" onClick={()=>handleClick("electronics")}>Electronics</div>
+                <div className="tile" onClick={()=>handleClick("shopping")}>Shopping</div>
+                <div className="tile" onClick={()=>handleClick("live")}>Live</div>
+                <div className="tile" onClick={()=>handleClick("music")}>Music</div>
+                <div className="tile" onClick={()=>handleClick("recent")}>Recently uploaded</div>
+                <div className="tile" onClick={()=>handleClick("foryou")}>For you</div>
+                <div className="tile" onClick={()=>handleClick("entertainment")}>Entertainment</div>
             </div>
         </div>
 

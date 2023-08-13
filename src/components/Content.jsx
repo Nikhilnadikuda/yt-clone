@@ -1,88 +1,50 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import VideoCard from './VideoCard'
 import '../Contentclone.css'
-const Content = () => {
-  const videos=[
-    {
-      id:1,
-      title:"Video Number 1",
-      channel:"Nikhil",
-      views:"100k",
-      timestamp:"1 hour ago",
-      image:require('../images/thumb.avif')
-    },
-    {
-      id:2,
-      title:"Video Number 3",
-      channel:"Rajeev",
-      views:"200k",
-      timestamp:"1 hour ago",
-      image:require('../images/thumb.avif')
-    },
-    {
-      id:3,
-      title:"Video Number 3",
-      channel:"Athishay",
-      views:"500k",
-      timestamp:"1 hour ago",
-      image:require('../images/thumb.avif')
-    },
-    {
-      id:4,
-      title:"Video Number 4",
-      channel:"Athishay",
-      views:"500k",
-      timestamp:"1 hour ago",
-      image:require('../images/thumb.avif')
-    },
-    {
-      id:5,
-      title:"Video Number 5",
-      channel:"Athishay",
-      views:"500k",
-      timestamp:"1 hour ago",
-      image:require('../images/thumb.avif')
-    },
-    {
-      id:6,
-      title:"Video Number 6",
-      channel:"Athishay",
-      views:"500k",
-      timestamp:"1 hour ago",
-      image:require('../images/thumb.avif')
-    },
-    {
-      id:7,
-      title:"Video Number 7",
-      channel:"Athishay",
-      views:"500k",
-      timestamp:"1 hour ago",
-      image:require('../images/thumb.avif')
-    },
-    {
-      id:8,
-      title:"Video Number 8",
-      channel:"Athishay",
-      views:"500k",
-      timestamp:"1 hour ago",
-      image:require('../images/thumb.avif')
-    },
-    {
-      id:9,
-      title:"Video Number 9",
-      channel:"Athishay",
-      views:"500k",
-      timestamp:"1 hour ago",
-      image:require('../images/thumb.avif')
-    }
-  ]
+import videos from './videos'
+import { useNavigate } from 'react-router-dom'
+
+const Content = (props) => {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 300)
+  }, [props.content])
+  const navigate = useNavigate();
+  // function generate(input) {
+  //   const key = 'nikhil128';
+  // const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  // let encrypted = '';
+
+  // for (let i = 0; i < 11; i++) {
+  //   const digit = parseInt(input, 10);
+  //   const keyCharCode = key.charCodeAt(i % key.length);
+  //   const encryptedCharCode = (digit + keyCharCode) % characters.length;
+  //   encrypted += characters.charAt(encryptedCharCode);
+  // }
+
+  // return encrypted;
+  // }
+  const handleClick = (id) => {
+    navigate(`/watch/${id}`);
+  }
   return (
-    <div className='main-content-container'>
-      {videos.map((video)=>{
-        return <VideoCard video={video} key={video.id}/>
-      })}
-        
-    </div>
+    <>
+      {<div className='main-content-container'>
+        {!loading && videos.filter((video) => {
+          return video.catergory.includes(props.content);
+        }).map((video) => {
+          return <VideoCard video={video} key={video.id} click={() => handleClick(video.id)} />;
+        })}
+        {!loading && videos.filter((video) => {
+          return video.catergory.includes(props.content);
+        }).length === 0 && <p>No content found</p>}
+      </div>
+      }
+    </>
+
+
   )
 }
 
