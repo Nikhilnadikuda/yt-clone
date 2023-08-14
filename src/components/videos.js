@@ -1,7 +1,7 @@
 const videos = [
     {
       id: 1,
-      title: "Video Number 1",
+      title: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam alias facilis velit tenetur animi ipsum corrupt",
       channel: "Nikhil",
       views: "100k",
       timestamp: "1 hour ago",
@@ -10,7 +10,7 @@ const videos = [
     },
     {
       id: 2,
-      title: "Video Number 3",
+      title: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam alias facilis velit tenetur animi ipsum corrupt",
       channel: "Rajeev",
       views: "200k",
       timestamp: "1 hour ago",
@@ -19,7 +19,7 @@ const videos = [
     },
     {
       id: 3,
-      title: "Video Number 3",
+      title: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam alias facilis velit tenetur animi ipsum corrupt",
       channel: "Athishay",
       views: "500k",
       timestamp: "1 hour ago",
@@ -37,7 +37,7 @@ const videos = [
     },
     {
       id: 5,
-      title: "Video Number 5",
+      title: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam alias facilis velit tenetur",
       channel: "Athishay",
       views: "500k",
       timestamp: "1 hour ago",
@@ -46,7 +46,7 @@ const videos = [
     },
     {
       id: 6,
-      title: "Video Number 6",
+      title: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam alias facilis velit tenetur animi ipsum",
       channel: "Athishay",
       views: "500k",
       timestamp: "1 hour ago",

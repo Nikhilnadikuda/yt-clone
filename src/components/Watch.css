@@ -1,9 +1,9 @@
 .watch-container {
     position: relative;
-    top: 70px;
+    top: 80px;
     display: flex;
     flex-wrap: wrap;
-
+    width: 100%;
 }
 
 .left-container {
@@ -175,15 +175,24 @@
     flex: 0.5;
 }
 
+.channel-logo-container {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+   
+}
+
 .img-container-image {
     width: 100%;
     height: 100%;
+    border-radius: 8px;
 }
 
 .side-video-container {
     display: flex;
     flex-direction: row;
-    height: 200px;
+    height: 150px;
+    margin: 0px 0px 10px 4px;
 
 }
 
@@ -193,12 +202,16 @@
     margin-right: 20px;
 }
 
+.video-views-container{
+    display: none;
+}
+
 .video-title {
-    margin: 10px;
+    margin: 4px 0px 0px 0px;
 }
 
 .side-video-channel-name {
-    margin: 10px;
+    margin: 4px 0px 0px 0px;
     display: flex;
     align-items: center;
 }
@@ -212,15 +225,76 @@
     align-items: center;
 }
 
-.nofcomments{
+.nofcomments {
     cursor: pointer;
 
 }
 
-.down-icon{
+.down-icon {
     cursor: pointer;
 }
 
+
+
+.side-video-info-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+
+.side-info-container {
+    flex: 0.5;
+}
+
+.acc-logo {
+    font-size: 40px !important;
+}
+
+.more-video-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.side-video-dot{
+    display: none;
+}
+
+.m-tile{
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    width:100px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin:0;
+    padding: 4px;
+    border: 1px solid grey;
+    color: black;
+    border-radius: 30px;
+    font-weight: 450;
+    gap:5px
+}
+.icon-text{
+    font-size: small;
+    font-weight: light;
+}
+.m-tile:nth-child(1){
+    margin-left: 10px;
+}
+.m-tile:last-child{
+    margin-right: 10px;
+}
+.main-video-likes-container{
+    display: flex;
+    gap:10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    overflow-x: auto;
+}
 @media (max-width:800px) {
     .video-screen {
         height: 450px;
@@ -240,8 +314,14 @@
 }
 
 @media (max-width:500px) {
-    .right-container {
+    .left-container{
         width: 100%;
+    }
+    .right-info-container {
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .video-screen {
@@ -249,7 +329,20 @@
     }
 
     .side-video-container {
-        height: 140px;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0px 20px 0px;
+    }
+
+    .video-title {
+        margin: 5px;
+    }
+
+    .side-video-channel-name {
+        margin: 5px;
+        display: flex;
+        align-items: center;
     }
 
 
@@ -259,4 +352,35 @@
         flex-wrap: wrap;
     }
 
+    .side-video-views-container {
+        margin-left: 5px;
+    }
+
+    .side-info-container {
+        display: flex;
+    }
+
+    .side-video-info-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .channel-logo-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+     .lg-channel-logo{
+        display: none;
+     }
+     .video-views-container-2{
+        display: none;
+     }
+
+     .video-views-container{
+        display: block;
+    }
+    .side-video-dot{
+        display: block;
+    }
 }

@@ -9,6 +9,11 @@ import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import ThumbUpIcon from '@mui/icons-material/ThumbUpOutlined';
 import ThumbDownIcon from '@mui/icons-material/ThumbDownOutlined';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import ShareIcon from '@mui/icons-material/ShareOutlined';
+import LibraryAddIcon from '@mui/icons-material/LibraryAddOutlined';
+import FileDownloadIcon from '@mui/icons-material/FileDownloadOutlined';
+import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivismOutlined';
+import ContentCutIcon from '@mui/icons-material/ContentCutOutlined';
 const Watch = () => {
 
   const comments = [
@@ -64,6 +69,9 @@ const Watch = () => {
     },
   ];
 
+
+  const[comment,setComment]=useState("")
+
   const { id } = useParams();
   const [video, setVideo] = useState({});
 
@@ -101,6 +109,34 @@ const Watch = () => {
             {video.views} views • {video.timestamp}
           </div>
         </div>
+        <div className="main-video-likes-container">
+          <div className="like-button m-tile">
+            <ThumbUpIcon className='like-container-icon'/> {"240"}
+          </div>
+          <div className="dislike-button m-tile">
+            <ThumbDownIcon className='like-container-icon'/> {"10"}
+          </div>
+          <div className="share-button m-tile">
+            <ShareIcon className='like-container-icon'/>
+            <span className='icon-text'>Share</span>
+          </div>
+          <div className="donate-button m-tile">
+            <VolunteerActivismIcon/>
+            <span className='icon-text'>Thanks</span>
+          </div>
+          <div className="download-button m-tile">
+            <FileDownloadIcon/>
+            <span className='icon-text'>Download</span>
+          </div>
+          <div className="save-button m-tile">
+            <LibraryAddIcon/>
+            <span className='icon-text'>Save</span>
+          </div>
+          <div className="cut-button m-tile">
+            <ContentCutIcon/>
+            <span className='icon-text'>Clip</span>
+          </div>
+        </div>
         <div className="info-container">
           <div className="left-info-container">
             <div className="channel-logo">
@@ -111,10 +147,10 @@ const Watch = () => {
             </div>
           </div>
           <div className="right-info-container">
-            <div className='likes-container-main'>
-            <ThumbUpIcon />
-            <ThumbDownIcon />
-            </div>
+            {/* <div className='likes-container-main'>
+              <ThumbUpIcon />
+              <ThumbDownIcon />
+            </div> */}
             <div className="subscribe">
               <div className={subscribed ? "icon-sub" : "icon"} onClick={handleSub}>{subscribed ? "SUBSCRIBED" : "SUBSCRIBE"}</div>
             </div>
@@ -139,12 +175,12 @@ const Watch = () => {
           </div>
           <div className="comment-elements">
             <div className="comment-input">
-              <input type="text" placeholder='Write your comment ....' className='com-input' />
-              <button className="comment-btn">Send</button>
+              <input type="text" placeholder='Write your comment ....' className='com-input' value={comment} onChange={(e)=>setComment(e.target.value)}/>
+              {comment.length!==0 && <button className="comment-btn">Send</button>}
             </div>
           </div>
         </div>
-        {showComments && 
+        {showComments &&
           <>
             <div className="all-comments">
               {comments.map((comment) => {
@@ -183,7 +219,7 @@ const Watch = () => {
               <div className="image-container">
                 <img src={video1} alt="img here" className='img-container-image' />
               </div>
-              <div className="side-info-container">
+              {/* <div className="side-info-container">
                 <div className="video-title">{video.title?.length >= 20 ? video.title.slice(0, 45) + "..." : video.title}</div>
                 <div className="side-video-channel-name">
                   <AccountCircleIcon />
@@ -191,6 +227,24 @@ const Watch = () => {
                 </div>
                 <div className="side-video-views-container">
                   {video.views} • {video.timestamp}
+                </div>
+              </div> */}
+              <div className="side-info-container">
+                <div className="channel-logo-container">
+                  <AccountCircleIcon className='acc-logo' />
+                </div>
+                <div className="side-video-info-container">
+                  <div className="video-title">{video.title?.length >= 20 ? video.title.slice(0, 80) + "..." : video.title}</div>
+                  <div className="more-video-details">
+                    <div className="side-video-channel-name">{video.channel}  {<span className="side-video-dot" style={{ marginLeft: "4px" }}> •</span>}
+                    </div>
+                    <div className="video-views-container">{video.views} • {video.timestamp}</div>
+                  </div>
+                  <div className="video-views-container-2">
+                    {video.views} views • {video.timestamp}
+                  </div>
+
+
                 </div>
               </div>
             </div>

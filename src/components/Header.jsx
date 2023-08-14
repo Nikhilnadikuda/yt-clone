@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import VideoCallIcon from "@mui/icons-material/VideoCall";
@@ -12,12 +12,12 @@ const Header = (props) => {
   return (
     <div className="header">
       <div className="header-left">
-        {!openmenu && <IconButton className="menu-bar-button">
-          <CloseIcon className="menu-bar icons" onClick={toggleMenu}/>
+        {!openmenu && <IconButton className="menu-bar-button" onClick={toggleMenu}>
+          <CloseIcon className="menu-bar icons" />
         </IconButton>}
         {openmenu &&
-        <IconButton className="menu-bar-button">
-          <MenuIcon className="menu-bar icons" onClick={toggleMenu}/>
+        <IconButton className="menu-bar-button" onClick={toggleMenu}>
+          <MenuIcon className="menu-bar icons" />
         </IconButton>
         }
         <img src={logo} alt="img here" className="logo" />
