@@ -7,6 +7,13 @@
 
 }
 
+.loader-container-main{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @media (max-width:2000px){
     .main-content-container{
         display: flex;

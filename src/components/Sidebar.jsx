@@ -1,7 +1,6 @@
 import React from 'react'
 import SidebarItem from './SidebarItem'
 import HomeIcon from '@mui/icons-material/HomeOutlined';
-// import WhatshotIcon from '@mui/icons-material/Whatshot';
 import SubscriptionsIcon from '@mui/icons-material/SubscriptionsOutlined';
 import VideoLibraryIcon from '@mui/icons-material/VideoLibraryOutlined';
 import HistoryIcon from '@mui/icons-material/HistoryOutlined';

@@ -6,7 +6,10 @@ const videos = [
       views: "100k",
       timestamp: "1 hour ago",
       image: require('../images/thumb.avif'),
-      catergory: "gaming"
+      catergory: "gaming",
+      likes:240,
+      dislikes:10,
+      subscribers:"250k"
     },
     {
       id: 2,
@@ -15,7 +18,10 @@ const videos = [
       views: "200k",
       timestamp: "1 hour ago",
       image: require('../images/thumb.avif'),
-      catergory: "gaming"
+      catergory: "gaming",
+      likes:240,
+      dislikes:10,
+      subscribers:"250k"
     },
     {
       id: 3,
@@ -24,7 +30,10 @@ const videos = [
       views: "500k",
       timestamp: "1 hour ago",
       image: require('../images/thumb.avif'),
-      catergory: "gaming"
+      catergory: "gaming",
+      likes:240,
+      dislikes:10,
+      subscribers:"250k"
     },
     {
       id: 4,
@@ -33,7 +42,10 @@ const videos = [
       views: "500k",
       timestamp: "1 hour ago",
       image: require('../images/thumb.avif'),
-      catergory: "gaming"
+      catergory: "gaming",
+      likes:240,
+      dislikes:10,
+      subscribers:"250k"
     },
     {
       id: 5,
@@ -42,7 +54,10 @@ const videos = [
       views: "500k",
       timestamp: "1 hour ago",
       image: require('../images/thumb.avif'),
-      catergory: "gaming"
+      catergory: "gaming",
+      likes:240,
+      dislikes:10,
+      subscribers:"250k"
     },
     {
       id: 6,
@@ -51,7 +66,10 @@ const videos = [
       views: "500k",
       timestamp: "1 hour ago",
       image: require('../images/thumb.avif'),
-      catergory: "music"
+      catergory: "music",
+      likes:240,
+      dislikes:10,
+      subscribers:"250k"
     },
     {
       id: 7,
@@ -60,7 +78,10 @@ const videos = [
       views: "500k",
       timestamp: "1 hour ago",
       image: require('../images/thumb.avif'),
-      catergory: "music"
+      catergory: "music",
+      likes:240,
+      dislikes:10,
+      subscribers:"250k"
     },
     {
       id: 8,
@@ -69,7 +90,10 @@ const videos = [
       views: "500k",
       timestamp: "1 hour ago",
       image: require('../images/thumb.avif'),
-      catergory: "live"
+      catergory: "live",
+      likes:240,
+      dislikes:10,
+      subscribers:"250k"
     },
     {
       id: 9,
@@ -78,7 +102,10 @@ const videos = [
       views: "500k",
       timestamp: "1 hour ago",
       image: require('../images/thumb.avif'),
-      catergory: "live"
+      catergory: "live",
+      likes:240,
+      dislikes:10,
+      subscribers:"250k"
     },
     {
       id: 10,
@@ -87,7 +114,10 @@ const videos = [
       views: "500k",
       timestamp: "1 hour ago",
       image: require('../images/thumb.avif'),
-      catergory: "entertainment"
+      catergory: "entertainment",
+      likes:240,
+      dislikes:10,
+      subscribers:"250k"
     },
     {
       id: 11,
@@ -96,7 +126,10 @@ const videos = [
       views: "500k",
       timestamp: "1 hour ago",
       image: require('../images/thumb.avif'),
-      catergory: "entertainment"
+      catergory: "entertainment",
+      likes:240,
+      dislikes:10,
+      subscribers:"250k"
     },
     {
       id: 12,
@@ -105,7 +138,10 @@ const videos = [
       views: "500k",
       timestamp: "1 hour ago",
       image: require('../images/thumb.avif'),
-      catergory: "news"
+      catergory: "news",
+      likes:240,
+      dislikes:10,
+      subscribers:"250k"
     },
     {
       id: 13,
@@ -114,7 +150,10 @@ const videos = [
       views: "500k",
       timestamp: "1 hour ago",
       image: require('../images/thumb.avif'),
-      catergory: "live"
+      catergory: "live",
+      likes:240,
+      dislikes:10,
+      subscribers:"250k"
     },
     {
       id: 14,
@@ -123,7 +162,10 @@ const videos = [
       views: "500k",
       timestamp: "1 hour ago",
       image: require('../images/thumb.avif'),
-      catergory: "live"
+      catergory: "live",
+      likes:240,
+      dislikes:10,
+      subscribers:"250k"
     },
     {
       id: 15,
@@ -132,7 +174,10 @@ const videos = [
       views: "500k",
       timestamp: "1 hour ago",
       image: require('../images/thumb.avif'),
-      catergory: "live"
+      catergory: "live",
+      likes:240,
+      dislikes:10,
+      subscribers:"250k"
     },
     {
       id: 16,
@@ -141,7 +186,10 @@ const videos = [
       views: "500k",
       timestamp: "1 hour ago",
       image: require('../images/thumb.avif'),
-      catergory: "cricket"
+      catergory: "cricket",
+      likes:240,
+      dislikes:10,
+      subscribers:"250k" 
     },
     {
       id: 17,
@@ -150,7 +198,10 @@ const videos = [
       views: "500k",
       timestamp: "1 hour ago",
       image: require('../images/thumb.avif'),
-      catergory: "cricket"
+      catergory: "cricket",
+      likes:240,
+      dislikes:10,
+      subscribers:"250k" 
     },
     {
       id: 18,
@@ -159,7 +210,10 @@ const videos = [
       views: "500k",
       timestamp: "1 hour ago",
       image: require('../images/thumb.avif'),
-      catergory: "cricket"
+      catergory: "cricket",
+      likes:240,
+      dislikes:10,
+      subscribers:"250k" 
     },
     {
       id: 19,
@@ -168,7 +222,10 @@ const videos = [
       views: "500k",
       timestamp: "1 hour ago",
       image: require('../images/thumb.avif'),
-      catergory: "live"
+      catergory: "live",
+      likes:240,
+      dislikes:10,
+      subscribers:"250k" 
     },
     {
       id: 20,
@@ -177,7 +234,10 @@ const videos = [
       views: "500k",
       timestamp: "1 hour ago",
       image: require('../images/thumb.avif'),
-      catergory: "live"
+      catergory: "live",
+      likes:240,
+      dislikes:10,
+      subscribers:"250k" 
     }
   ]
   export default videos

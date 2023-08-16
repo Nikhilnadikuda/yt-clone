@@ -3,13 +3,14 @@ import VideoCard from './VideoCard'
 import '../Contentclone.css'
 import videos from './videos'
 import { useNavigate } from 'react-router-dom'
+import Loader from './Loader'
 
 const Content = (props) => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 300)
+    }, 800)
   }, [props.content])
   const navigate = useNavigate();
   // function generate(input) {
@@ -41,6 +42,11 @@ const Content = (props) => {
           return video.catergory.includes(props.content);
         }).length === 0 && <p>No content found</p>}
       </div>
+      }
+      {loading &&
+        <div className="loader-container-main">
+          <Loader />
+        </div>
       }
     </>
 

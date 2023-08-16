@@ -7,7 +7,9 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircleOutlined";
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import ThumbUpIcon from '@mui/icons-material/ThumbUpOutlined';
+import ThumbUpIcon1 from '@mui/icons-material/ThumbUp';
 import ThumbDownIcon from '@mui/icons-material/ThumbDownOutlined';
+import ThumbDownIcon1 from '@mui/icons-material/ThumbDown' 
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import ShareIcon from '@mui/icons-material/ShareOutlined';
 import LibraryAddIcon from '@mui/icons-material/LibraryAddOutlined';
@@ -15,7 +17,6 @@ import FileDownloadIcon from '@mui/icons-material/FileDownloadOutlined';
 import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivismOutlined';
 import ContentCutIcon from '@mui/icons-material/ContentCutOutlined';
 const Watch = () => {
-
   const comments = [
     {
       id: 1,
@@ -68,8 +69,6 @@ const Watch = () => {
       message: 'Awesome content! Looking forward to more.',
     },
   ];
-
-
   const[comment,setComment]=useState("")
 
   const { id } = useParams();
@@ -86,14 +85,25 @@ const Watch = () => {
 
   const [subscribed, setSubscribed] = useState(false)
   const [notify, setNofity] = useState(false);
+  const [liked,setLiked]=useState(false);
+  const [disliked,setDisliked]=useState(false);
   const handleSub = () => {
     setSubscribed(!subscribed)
     setNofity(false);
+  }
+  const handleLike=()=>{
+    setDisliked(false);
+    setLiked(!liked);
+  }
+  const handleDislike=()=>{
+    setLiked(false)
+    setDisliked(!disliked);
   }
   const handleNotify = () => {
     setNofity(!notify);
   }
   const [showComments, setShowComments] = useState(false);
+
   const handleDown = () => {
     setShowComments(!showComments)
   }
@@ -110,11 +120,30 @@ const Watch = () => {
           </div>
         </div>
         <div className="main-video-likes-container">
-          <div className="like-button m-tile">
-            <ThumbUpIcon className='like-container-icon'/> {"240"}
+          <div className="like-button m-tile" onClick={handleLike}>
+            {!liked && <>
+              <ThumbUpIcon className='like-container-icon'/>
+              {video.likes + !liked?video.likes:video.likes+1}
+            </>
+            } 
+            {liked && <>
+              <ThumbUpIcon1 className='like-container-icon'/>
+              {video.likes+1} 
+            </>}
+            
           </div>
-          <div className="dislike-button m-tile">
-            <ThumbDownIcon className='like-container-icon'/> {"10"}
+          <div className="dislike-button m-tile" onClick={handleDislike}>
+            {!disliked && <>
+              <ThumbDownIcon className='like-container-icon'/>
+              {video.dislikes +!disliked?video.dislikes:video.dislikes+1}
+            </>
+            }
+            {disliked && <>
+                <ThumbDownIcon1 className="like-container-icon"/>
+                {video.dislikes+1}
+              </>
+            }
+            
           </div>
           <div className="share-button m-tile">
             <ShareIcon className='like-container-icon'/>
@@ -143,14 +172,10 @@ const Watch = () => {
               <AccountCircleIcon className='channel-logo' />
             </div>
             <div className="channel-name">
-              {video.channel} • <small>250k</small>
+              {video.channel} • <small>{video.subscribers}</small>
             </div>
           </div>
           <div className="right-info-container">
-            {/* <div className='likes-container-main'>
-              <ThumbUpIcon />
-              <ThumbDownIcon />
-            </div> */}
             <div className="subscribe">
               <div className={subscribed ? "icon-sub" : "icon"} onClick={handleSub}>{subscribed ? "SUBSCRIBED" : "SUBSCRIBE"}</div>
             </div>
@@ -219,16 +244,6 @@ const Watch = () => {
               <div className="image-container">
                 <img src={video1} alt="img here" className='img-container-image' />
               </div>
-              {/* <div className="side-info-container">
-                <div className="video-title">{video.title?.length >= 20 ? video.title.slice(0, 45) + "..." : video.title}</div>
-                <div className="side-video-channel-name">
-                  <AccountCircleIcon />
-                  {video.channel}
-                </div>
-                <div className="side-video-views-container">
-                  {video.views} • {video.timestamp}
-                </div>
-              </div> */}
               <div className="side-info-container">
                 <div className="channel-logo-container">
                   <AccountCircleIcon className='acc-logo' />
@@ -243,8 +258,6 @@ const Watch = () => {
                   <div className="video-views-container-2">
                     {video.views} views • {video.timestamp}
                   </div>
-
-
                 </div>
               </div>
             </div>
